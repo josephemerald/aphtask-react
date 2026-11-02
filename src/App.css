@@ -1,0 +1,125 @@
+/* task cards and add task form*/
+
+.task-card, .addtask-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* task filters */
+.task-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem;
+}
+
+.task-filter .btn{
+    white-space: normal;
+}
+
+/* sorting */
+.sorting-container{
+    max-width: 32rem;
+}
+
+/* search */
+
+.search-container {
+    max-width: 600px;
+}
+
+.search-input {
+    width: 100%;
+}
+
+/* statistics */
+.stats-card {
+    flex: 1 1 150px;
+    max-width: 250px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+/* main task layout */
+.task-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+    gap: 1.5rem;
+    align-items:start;
+    margin-top: 1.5rem;
+}
+
+/* task list section and task form section */
+.task-list-section, .task-form-section {
+    min-width: 0;
+}
+
+.task-form-section .addtask-card {
+    width: 100%;
+    max-width: 100%;
+}
+
+.task-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 1rem;
+    align-items: stretch;
+}
+
+
+
+/* tablet and smaller screens */
+@media (max-width: 768px) {
+    .task-card {
+        width: 100%;
+    }
+
+    .addtask-card {
+        width: 100%;
+    }
+
+    .task-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* small mobile screens */
+@media (max-width: 480px) {
+    .task-card {
+        padding: 1rem !important;
+    }
+
+    .addtask-card {
+        margin: 0.5rem !important;
+        padding: 1rem !important;
+    }
+
+    .task-filter {
+        width: 100%;
+        gap: 0.4rem;
+    }
+
+    .task-filter .btn{
+        flex: 1 1 auto;
+    }
+
+    .sorting-container { 
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .app-container {
+        padding: 0.75rem;
+    }
+}
+
